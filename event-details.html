@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Обговорення «Місто» — BookMatch</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+         <img src="images/logo/logo.png" alt="BookMatch логотип" width="80" height="80">
+        <span>BookMatch</span>
+      </a>
+      <nav class="main-nav" aria-label="Головна навігація">
+        <ul class="nav-list">
+          <li><a href="index.html">Головна</a></li>
+          <li><a href="events.html">Розклад подій</a></li>
+          <li><a href="event-details.html" class="active">Книга місяця</a></li>
+          <li><a href="about.html">Про клуб та Правила</a></li>
+          <li><a href="contacts.html">Контакти та FAQ</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <a href="auth.html" class="btn btn-outline">Увійти</a>
+        <a href="profile.html" class="btn btn-primary">Мій кабінет</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="event-detail-section">
+      <div class="container event-detail-grid">
+        
+        <!-- Ліва колонка: інфо про книгу та питання -->
+        <div class="event-main-info">
+          <div class="book-overview">
+            <img src="images/books/misto.jpg" alt="Обкладинка книги Місто" width="120" height="200">
+            <div>
+              <span class="badge badge-spoiler">Регламент: читаємо до 150 сторінки</span>
+              <h1>«Місто» — Валер’ян Підмогильний</h1>
+              <p class="author-info">Рік видання: 1928 • Жанр: Урбаністичний модернізм</p>
+              <p>
+                Степан Радченко приїжджає із села до Києва здобувати освіту й змінювати життя. 
+                На першій зустрічі ми розбираємо першу частину роману: адаптацію героя до великого 
+                міста, його перші літературні спроби та ставлення до оточення.
+              </p>
+            </div>
+          </div>
+
+          <!-- Колаборативний список питань -->
+          <section class="discussion-questions">
+            <h2>Питання до обговорення</h2>
+            <p>Запропонуйте своє питання або підтримайте найцікавіші теми для модератора:</p>
+            <ul class="questions-list">
+              <li>
+                <span>1. Чи є Степан Радченко типовим кар’єристом, чи це пошук себе у новому середовищі?</span>
+                <button type="button" class="btn-vote">▲ 6</button>
+              </li>
+              <li>
+                <span>2. Як автор описує Київ 1920-х років: місто виступає як фон чи як окремий персонаж?</span>
+                <button type="button" class="btn-vote">▲ 4</button>
+              </li>
+            </ul>
+
+            <form class="add-question-form">
+              <label for="new-question">Ваше запитання до книги (без спойлерів після 150 стор.):</label>
+              <input type="text" id="new-question" placeholder="Введіть текст запитання..." required>
+              <button type="submit" class="btn btn-secondary">Додати питання</button>
+            </form>
+          </section>
+        </div>
+
+        <!-- Права колонка: картка бронювання (RSVP) -->
+        <aside class="booking-sidebar">
+          <div class="booking-card">
+            <h2>Деталі зустрічі</h2>
+            <ul class="meta-list">
+              <li><strong>Дата:</strong> Субота, 21 листопада</li>
+              <li><strong>Час:</strong> 11:00 – 13:00</li>
+              <li><strong>Локація:</strong> Київ, кав’ярня «Coffee House»</li>
+              <li><strong>Модератор:</strong> Вікторія Шевченко</li>
+              <li><strong>Ліміт групи:</strong> 7 учасників (вільно: 5)</li>
+            </ul>
+
+            <form id="rsvpForm" class="rsvp-form">
+              <label for="participant-name">Ваше ім'я:</label>
+              <input type="text" id="participant-name" name="name" required placeholder="Example: Олександр">
+
+              <label for="participant-contact">Telegram або Email для зв'язку:</label>
+              <input type="text" id="participant-contact" name="contact" required placeholder="@username">
+
+              <label class="checkbox-label">
+                <input type="checkbox" required>
+                Підтверджую, що дотримаюсь регламенту сторінок (без спойлерів)
+              </label>
+
+              <button type="submit" class="btn btn-primary btn-block">Забронювати місце</button>
+            </form>
+          </div>
+        </aside>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <strong>BookMatch</strong>
+        <p>Камерні книжкові клуби для свідомого читання та живого діалогу.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Навігація у футері">
+        <ul>
+          <li><a href="index.html">Головна</a></li>
+          <li><a href="events.html">Розклад подій</a></li>
+          <li><a href="event-details.html">Книга місяця</a></li>
+          <li><a href="about.html">Про клуб та Правила</a></li>
+          <li><a href="contacts.html">Контакти та FAQ</a></li>
+        </ul>
+      </nav>
+      <p class="copyright">&copy; 2026 BookMatch. Усі права захищено.</p>
+    </div>
+  </footer>
+
+  <script src="js/booking.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

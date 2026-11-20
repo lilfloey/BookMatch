@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BookMatch — Платформа камерних книжкових клубів</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages/home.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <img src="images/logo/logo.png" alt="BookMatch логотип" width="80" height="80">
+        <span>BookMatch</span>
+      </a>
+      <nav class="main-nav" aria-label="Головна навігація">
+        <ul class="nav-list">
+          <li><a href="index.html" class="active">Головна</a></li>
+          <li><a href="events.html">Розклад подій</a></li>
+          <li><a href="event-details.html">Книга місяця</a></li>
+          <li><a href="about.html">Про клуб та Правила</a></li>
+          <li><a href="contacts.html">Контакти та FAQ</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <a href="auth.html" class="btn btn-outline">Увійти</a>
+        <a href="profile.html" class="btn btn-primary">Мій кабінет</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero-секція -->
+    <section class="hero">
+      <div class="container hero-content">
+        <h1>Знаходь однодумців для глибоких книжкових дискусій</h1>
+        <p>
+          BookMatch об’єднує читачів у камерні локальні та онлайн-клуби 
+          із чітким прогресом читання, захистом від спойлерів та спільним списком питань.
+        </p>
+        <div class="hero-buttons">
+          <a href="events.html" class="btn btn-primary">Обрати зустріч</a>
+          <a href="about.html" class="btn btn-secondary">Як це працює</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Блок: Книга місяця -->
+    <section class="featured-book">
+      <div class="container">
+        <h2 class="section-tag">Книга місяця • Листопад</h2>
+        <article class="featured-card">
+          <img src="images/books/misto.jpg" alt="Обкладинка книги місяця" width="120" height="200">
+          <div class="featured-info">
+            <h2>«Місто» — Валер’ян Підмогильний</h2>
+            <p class="book-meta">Класика • Український модернізм • 280 сторінок</p>
+            <p>
+              Історія Степана Радченка, який приїздить підкорювати Київ. Розбираємо психологізм 
+              персонажів, урбаністику 1920-х та філософію творчості без спойлерів до фіналу.
+            </p>
+            <div class="reading-progress">
+              <span>Поточний етап читання: <strong>Розділи 1–6 (до 150 стор.)</strong></span>
+            </div>
+            <a href="event-details.html" class="btn btn-primary">Записатися на обговорення</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Блок: Найближчі зустрічі -->
+    <section class="upcoming-events">
+      <div class="container">
+        <div class="section-header">
+          <h2>Найближчі зустрічі</h2>
+          <a href="events.html" class="link-arrow">Усі події →</a>
+        </div>
+        <div class="events-grid">
+          <article class="event-card">
+            <div class="event-badges">
+              <span class="badge badge-offline">Київ • Кав’ярня</span>
+              <span class="badge badge-spoiler">Перші 150 стор.</span>
+            </div>
+            <h3>Обговорення «Місто» В. Підмогильного</h3>
+            <p class="event-date">Сб, 21 листопада • 11:00</p>
+            <p class="event-location">Кав’ярня «Coffee House», вул. Хрещатик</p>
+            <div class="event-footer">
+              <span class="seats-left">Залишилось місць: <strong>2 з 7</strong></span>
+              <a href="event-details.html" class="btn btn-small">Детальніше</a>
+            </div>
+          </article>
+
+          <article class="event-card">
+            <div class="event-badges">
+              <span class="badge badge-online">Онлайн • Google Meet</span>
+              <span class="badge badge-spoiler">Повний розбір</span>
+            </div>
+            <h3>Нонфікшн-клуб: «Шум. Хибність людських суджень»</h3>
+            <p class="event-date">Нд, 22 листопада • 18:30</p>
+            <p class="event-location">Онлайн-кімната (посилання після реєстрації)</p>
+            <div class="event-footer">
+              <span class="seats-left">Залишилось місць: <strong>3 з 8</strong></span>
+              <a href="event-details.html" class="btn btn-small">Детальніше</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Блок: Відгуки спільноти -->
+    <section class="testimonials">
+      <div class="container">
+        <h2>Враження учасників спільноти</h2>
+        <div class="testimonials-grid">
+          <blockquote class="testimonial-card">
+            <p>«Нарешті жодних хаотичних чатів на 200 повідомлень і раптових спойлерів. Приходиш у кав’ярню, де всі прочитали рівно стільки, скільки було заплановано.»</p>
+            <footer>— Катерина, студентка КПІ</footer>
+          </blockquote>
+          <blockquote class="testimonial-card">
+            <p>«Формат на 6 людей ідеальний для інтровертів: кожен встигає висловитися, а список питань допомагає уникнути незручних пауз.»</p>
+            <footer>— Максим, частий гість онлайн-клубу</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <strong>BookMatch</strong>
+        <p>Камерні книжкові клуби для свідомого читання та живого діалогу.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Навігація у футері">
+        <ul>
+          <li><a href="index.html">Головна</a></li>
+          <li><a href="events.html">Розклад подій</a></li>
+          <li><a href="event-details.html">Книга місяця</a></li>
+          <li><a href="about.html">Про клуб та Правила</a></li>
+          <li><a href="contacts.html">Контакти та FAQ</a></li>
+        </ul>
+      </nav>
+      <p class="copyright">&copy; 2026 BookMatch. Усі права захищено.</p>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

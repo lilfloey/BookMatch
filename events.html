@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Розклад подій — BookMatch</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages/events.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+         <img src="images/logo/logo.png" alt="BookMatch логотип" width="80" height="80">
+      </a>
+      <nav class="main-nav" aria-label="Головна навігація">
+        <ul class="nav-list">
+          <li><a href="index.html">Головна</a></li>
+          <li><a href="events.html" class="active">Розклад подій</a></li>
+          <li><a href="event-details.html">Книга місяця</a></li>
+          <li><a href="about.html">Про клуб та Правила</a></li>
+          <li><a href="contacts.html">Контакти та FAQ</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <a href="auth.html" class="btn btn-outline">Увійти</a>
+        <a href="profile.html" class="btn btn-primary">Мій кабінет</a>
+      </div>
+    </div>
+  </header>
+
+ <main>
+    <section class="page-header">
+      <div class="container">
+        <h1>Каталог книжкових зустрічей</h1>
+        <p>Обирайте комфортний формат, рівень занурення у текст та бронюйте місце у камерній групі.</p>
+      </div>
+    </section>
+
+    <!-- Панель фільтрації -->
+    <div class="filters-section">
+      <div class="container">
+        <form class="filters-bar" id="eventsFilterForm">
+          <div class="filter-group">
+            <label for="filter-format">Формат:</label>
+            <select id="filter-format" name="format">
+              <option value="all">Усі формати</option>
+              <option value="offline">Офлайн (кав'ярні)</option>
+              <option value="online">Онлайн</option>
+              <option value="silent">Silent Reading</option>
+            </select>
+          </div>
+
+          <div class="filter-group">
+            <label for="filter-genre">Жанр:</label>
+            <select id="filter-genre" name="genre">
+              <option value="all">Усі жанри</option>
+              <option value="fiction">Художня література</option>
+              <option value="nonfiction">Нонфікшн</option>
+              <option value="scifi">Наукова фантастика</option>
+              <option value="classic">Класика</option>
+            </select>
+          </div>
+
+          <div class="filter-group">
+            <label for="filter-city">Місто:</label>
+            <select id="filter-city" name="city">
+              <option value="all">Будь-яке</option>
+              <option value="kyiv">Київ</option>
+              <option value="lviv">Львів</option>
+              <option value="online">Онлайн</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Застосувати</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Сітка подій -->
+    <section class="catalog-section">
+      <div class="container">
+        <h2>Заплановані зустрічі</h2>
+        <div class="events-grid" id="eventsContainer">
+          
+          <article class="event-card">
+            <div class="event-badges">
+              <span class="badge badge-offline">Київ • Офлайн</span>
+              <span class="badge badge-genre">Класика</span>
+              <span class="badge badge-spoiler">Перші 150 стор.</span>
+            </div>
+            <h3>«Місто» — Валер’ян Підмогильний</h3>
+            <p class="event-date">Сб, 21 листопада • 11:00 – 13:00</p>
+            <p class="event-location">Кав’ярня «Coffee House», вул. Хрещатик, 15</p>
+            <div class="event-footer">
+              <span class="seats-left">Місця: <strong>2 / 7 зайнято</strong></span>
+              <a href="event-details.html" class="btn btn-primary">Записатися</a>
+            </div>
+          </article>
+
+          <article class="event-card">
+            <div class="event-badges">
+              <span class="badge badge-online">Онлайн</span>
+              <span class="badge badge-genre">Нонфікшн</span>
+              <span class="badge badge-spoiler">Повний розбір</span>
+            </div>
+            <h3>«Шум. Хибність людських суджень» — Д. Канеман</h3>
+            <p class="event-date">Нд, 22 листопада • 18:30 – 20:00</p>
+            <p class="event-location">Google Meet • Мова обговорення: українська</p>
+            <div class="event-footer">
+              <span class="seats-left">Місця: <strong>3 / 8 зайнято</strong></span>
+              <a href="event-details.html" class="btn btn-primary">Записатися</a>
+            </div>
+          </article>
+
+          <article class="event-card">
+            <div class="event-badges">
+              <span class="badge badge-offline">Львів • Silent Reading</span>
+              <span class="badge badge-genre">Вільний вибір</span>
+              <span class="badge badge-spoiler">Без спойлерів</span>
+            </div>
+            <h3>Тихе читання у центрі Львова</h3>
+            <p class="event-date">Вт, 24 листопада • 19:00 – 21:00</p>
+            <p class="event-location">Книгарня-кав’ярня «Старий Лев»</p>
+            <div class="event-footer">
+              <span class="seats-left">Місця: <strong>4 / 6 зайнято</strong></span>
+              <a href="event-details.html" class="btn btn-primary">Записатися</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <strong>BookMatch</strong>
+        <p>Камерні книжкові клуби для свідомого читання та живого діалогу.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Навігація у футері">
+        <ul>
+          <li><a href="index.html">Головна</a></li>
+          <li><a href="events.html">Розклад подій</a></li>
+          <li><a href="event-details.html">Книга місяця</a></li>
+          <li><a href="about.html">Про клуб та Правила</a></li>
+          <li><a href="contacts.html">Контакти та FAQ</a></li>
+        </ul>
+      </nav>
+      <p class="copyright">&copy; 2026 BookMatch. Усі права захищено.</p>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/events-filter.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
