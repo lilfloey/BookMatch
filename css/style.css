@@ -1,0 +1,9 @@
+/* Підключення шрифтів із Google Fonts відповідно до брендбуку */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:wght@600;700&display=swap');
+
+/* Модульне підключення стилів проєкту */
+@import url('reset.css');
+@import url('variables.css');
+@import url('base.css');
+@import url('layout.css');
+@import url('components.css');

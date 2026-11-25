@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Мій кабінет — BookMatch</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <img src="images/logo/logo.png" alt="BookMatch логотип" width="80" height="80">
+        <span>BookMatch</span>
+      </a>
+
+      <input type="checkbox" id="burger-toggle" class="burger-toggle" aria-label="Відкрити меню">
+      <label for="burger-toggle" class="burger-btn" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <nav class="main-nav" aria-label="Головна навігація">
+        <ul class="nav-list">
+          <li><a href="index.html">Головна</a></li>
+          <li><a href="events.html">Розклад подій</a></li>
+          <li><a href="event-details.html">Книга місяця</a></li>
+          <li><a href="about.html">Про клуб та Правила</a></li>
+          <li><a href="contacts.html">Контакти та FAQ</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="auth.html" class="btn btn-outline">Вийти</a>
+        <a href="profile.html" class="btn btn-primary">Мій кабінет</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="profile-section">
+      <div class="container profile-grid">
+        
+        <!-- Картка профілю -->
+        <aside class="booking-card profile-sidebar">
+          <div class="profile-avatar">ОК</div>
+          <h1>Олена Кравець</h1>
+          <p class="event-date">Учасниця клубу • Київ</p>
+          
+          <div class="event-badges" style="margin-top: 1rem;">
+            <span class="badge">Класика</span>
+            <span class="badge">Нонфікшн</span>
+            <span class="badge badge-spoiler">Офлайн + Онлайн</span>
+          </div>
+
+          <ul class="meta-list" style="margin-top: 1.25rem;">
+            <li><strong>Відвідано зустрічей:</strong> 4</li>
+            <li><strong>Запропоновано питань:</strong> 7</li>
+            <li><strong>Статус надійності:</strong> 100% (без неявок)</li>
+          </ul>
+        </aside>
+
+        <!-- Блок бронювань -->
+        <div class="profile-content">
+          <h2>Мої заброньовані зустрічі</h2>
+          <p>Якщо плани змінилися, скасуйте реєстрацію заздалегідь, щоб звільнити місце в камерній групі.</p>
+
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>Книга та тема</th>
+                  <th>Дата і час</th>
+                  <th>Формат</th>
+                  <th>Регламент</th>
+                  <th>Дія</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>«Місто»</strong> — В. Підмогильний</td>
+                  <td>21 лист., 11:00</td>
+                  <td>Київ • Кав’ярня</td>
+                  <td>До 150 стор.</td>
+                  <td><a href="event-details.html" class="btn btn-small">Деталі</a></td>
+                </tr>
+                <tr>
+                  <td><strong>«Шум»</strong> — Д. Канеман</td>
+                  <td>22 лист., 18:30</td>
+                  <td>Онлайн • Meet</td>
+                  <td>Повний розбір</td>
+                  <td><a href="event-details.html" class="btn btn-small">Деталі</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <strong>BookMatch</strong>
+        <p>Камерні книжкові клуби для свідомого читання та живого діалогу.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Навігація у футері">
+        <ul>
+          <li><a href="index.html">Головна</a></li>
+          <li><a href="events.html">Розклад подій</a></li>
+          <li><a href="event-details.html">Книга місяця</a></li>
+          <li><a href="about.html">Про клуб та Правила</a></li>
+          <li><a href="contacts.html">Контакти та FAQ</a></li>
+        </ul>
+      </nav>
+      <p class="copyright">&copy; 2026 BookMatch. Усі права захищено.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

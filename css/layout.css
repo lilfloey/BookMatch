@@ -1,0 +1,230 @@
+.container {
+  width: 100%;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+section {
+  padding: 3.5rem 0;
+}
+
+/* Шапка сайту (Flexbox) */
+.site-header {
+  background-color: var(--color-bg-card);
+  border-bottom: 1px solid var(--color-border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 72px;
+  gap: 1.5rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--color-dark-brown);
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.nav-list a {
+  font-size: 0.92rem;
+  font-weight: 500;
+  white-space: nowrap;
+  color: var(--color-text-muted);
+  padding: 0.35rem 0;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.nav-list a:hover,
+.nav-list a.active {
+  color: var(--color-text-main);
+  border-bottom-color: var(--color-btn-primary);
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* Бургер-меню (приховане на десктопі) */
+.burger-toggle {
+  display: none;
+}
+
+.burger-btn {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.burger-btn span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: var(--color-text-main);
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Hero-секція */
+.hero {
+  background-color: var(--color-bg-sand);
+  border-bottom: 1px solid var(--color-border);
+  padding: 4.5rem 0;
+}
+
+.hero-content {
+  max-width: 720px;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.75rem;
+}
+
+/* Сітки (CSS Grid) */
+.events-grid,
+.principles-grid,
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 1.5rem;
+}
+
+/* Двоколонковий макет для детальної сторінки та контактів */
+.event-detail-grid,
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+/* Футер */
+.site-footer {
+  background-color: var(--color-dark-brown);
+  color: var(--color-bg-sand);
+  padding: 3rem 0 2rem;
+  margin-top: 3rem;
+}
+
+.footer-inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(207, 205, 180, 0.2);
+}
+
+.footer-brand strong {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  color: #FAF9F6;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.footer-brand p {
+  color: var(--color-bg-sand);
+  max-width: 320px;
+  font-size: 0.9rem;
+}
+
+.footer-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+}
+
+.footer-nav a:hover {
+  color: var(--color-accent-gold);
+}
+
+.copyright {
+  width: 100%;
+  font-size: 0.85rem;
+  color: rgba(207, 205, 180, 0.75);
+  margin-top: 1rem;
+}
+
+/* Адаптивність: планшети та смартфони (@media) */
+@media (max-width: 992px) {
+  .event-detail-grid,
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 860px) {
+  .burger-btn {
+    display: flex;
+  }
+
+  .main-nav {
+    position: absolute;
+    top: 72px;
+    left: 0;
+    right: 0;
+    background-color: var(--color-bg-card);
+    border-bottom: 1px solid var(--color-border);
+    padding: 1.25rem;
+    display: none;
+    box-shadow: 0 10px 25px rgba(25, 11, 7, 0.08);
+  }
+
+  .nav-list {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .header-actions {
+    display: none;
+  }
+
+  /* Відкриття меню при натисканні на бургер */
+  .burger-toggle:checked ~ .main-nav {
+    display: block;
+  }
+
+  .burger-toggle:checked + .burger-btn span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+  .burger-toggle:checked + .burger-btn span:nth-child(2) {
+    opacity: 0;
+  }
+  .burger-toggle:checked + .burger-btn span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+}

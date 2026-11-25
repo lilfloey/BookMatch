@@ -1,0 +1,89 @@
+body {
+  background-color: var(--color-bg-paper);
+  color: var(--color-text-main);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Заголовки журнальної естетики */
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  color: var(--color-text-main);
+  line-height: 1.25;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  margin-bottom: 1.25rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+p {
+  margin-bottom: 1rem;
+  color: var(--color-text-main);
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+/* Посилання в тексті */
+main a:not(.btn) {
+  color: var(--color-btn-primary);
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+main a:not(.btn):hover {
+  color: var(--color-dark-brown);
+  text-decoration: underline;
+}
+
+/* Стилізація нумерованих списків (правила клубу) */
+.rules-list {
+  list-style: decimal;
+  padding-left: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.rules-list li::marker {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  color: var(--color-btn-secondary);
+}
+
+/* Базова стилізація таблиць (для майбутнього розкладу або порівнянь) */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--color-bg-card);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+}
+
+th, td {
+  padding: 0.85rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--color-border);
+}
+
+th {
+  background-color: var(--color-bg-sand);
+  font-family: var(--font-heading);
+  font-weight: 600;
+}

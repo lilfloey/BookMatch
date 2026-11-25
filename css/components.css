@@ -1,0 +1,519 @@
+/* Кнопки */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  padding: 0.65rem 1.35rem;
+  border-radius: var(--radius-sm);
+  font-weight: 500;
+  font-size: 0.95rem;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.btn-primary {
+  background-color: var(--color-btn-primary);
+  color: #FAF9F6;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-btn-primary-hover);
+}
+
+.btn-secondary {
+  background-color: var(--color-btn-secondary);
+  color: #FAF9F6;
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-dark-brown);
+}
+
+.btn-outline {
+  border-color: var(--color-dark-brown);
+  color: var(--color-dark-brown);
+  background-color: transparent;
+}
+
+.btn-outline:hover {
+  background-color: var(--color-dark-brown);
+  color: #FAF9F6;
+}
+
+.btn-small {
+  padding: 0.45rem 0.95rem;
+  font-size: 0.85rem;
+  background-color: var(--color-bg-sand);
+  color: var(--color-text-main);
+}
+
+.btn-small:hover {
+  background-color: var(--color-accent-gold);
+}
+
+.btn-block {
+  width: 100%;
+}
+
+/* Картки подій, принципів, відгуків та бронювання */
+.event-card,
+.principle-card,
+.testimonial-card,
+.booking-card,
+.featured-card {
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+}
+
+.event-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.featured-card {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.featured-card img,
+.book-overview img {
+  width: 180px;
+  border-radius: var(--radius-sm);
+  flex-shrink: 0;
+  box-shadow: 0 6px 16px rgba(25, 11, 7, 0.12);
+}
+
+.book-overview {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+@media (max-width: 640px) {
+  .featured-card,
+  .book-overview {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* Бейджі та моноширинні маркери */
+.event-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.badge {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  background-color: var(--color-bg-sand);
+  color: var(--color-text-main);
+}
+
+.badge-spoiler {
+  background-color: rgba(71, 81, 31, 0.15);
+  color: var(--color-btn-primary);
+  font-weight: 500;
+}
+
+.event-date,
+.seats-left {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.event-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.reading-progress {
+  background-color: var(--color-bg-paper);
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-sm);
+  border-left: 3px solid var(--color-btn-primary);
+  margin: 1rem 0 1.25rem;
+  font-size: 0.9rem;
+}
+
+/* Панель фільтрів */
+.filters-section {
+  padding: 1.5rem 0 0;
+}
+
+.filters-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: flex-end;
+  background-color: var(--color-bg-card);
+  padding: 1.25rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  flex: 1 1 180px;
+}
+
+/* Стилізація форм та валідація (Пункт 3) */
+.rsvp-form,
+.contact-form,
+.add-question-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--color-text-main);
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  width: 100%;
+  padding: 0.65rem 0.85rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background-color: #FFFFFF;
+  color: var(--color-text-main);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--color-btn-primary);
+  box-shadow: 0 0 0 3px rgba(71, 81, 31, 0.15);
+}
+
+/* Візуальна клієнтська валідація полів, які користувач вже заповнював */
+input:user-invalid,
+textarea:user-invalid {
+  border-color: var(--color-error);
+  background-color: #FFF8F7;
+}
+
+input:user-valid,
+textarea:user-valid {
+  border-color: var(--color-success);
+}
+
+.error-hint {
+  font-size: 0.8rem;
+  color: var(--color-error);
+  display: none;
+}
+
+input:user-invalid + .error-hint,
+textarea:user-invalid + .error-hint {
+  display: block;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.checkbox-label input[type="checkbox"] {
+  margin-top: 0.25rem;
+  accent-color: var(--color-btn-primary);
+}
+
+/* Список питань та FAQ */
+.questions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin: 1rem 0 1.5rem;
+}
+
+.questions-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  background-color: var(--color-bg-card);
+  padding: 0.85rem 1rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+}
+
+.btn-vote {
+  font-family: var(--font-mono);
+  background-color: var(--color-bg-sand);
+  border: none;
+  padding: 0.35rem 0.75rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.faq-item {
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 1rem 1.25rem;
+}
+
+.faq-item summary {
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.faq-item p {
+  margin-top: 0.75rem;
+  color: var(--color-text-muted);
+}
+
+.meta-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--color-border);
+}
+/* Вступна секція та залізне центрування зображення на сторінці "Про клуб" */
+.about-mission {
+  text-align: center;
+}
+
+.about-mission .lead {
+  max-width: 720px;
+  margin: 0 auto 2rem;
+  color: var(--color-text-muted);
+  font-size: 1.1rem;
+}
+
+.about-hero-media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.about-hero-media img {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 840px;
+  max-height: 420px;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  box-shadow: 0 10px 28px rgba(25, 11, 7, 0.1);
+}
+/* Поле пароля (наслідує стилі текстових інпутів) */
+input[type="password"] {
+  width: 100%;
+  padding: 0.65rem 0.85rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background-color: #FFFFFF;
+  color: var(--color-text-main);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Сітка сторінки авторизації */
+.auth-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  align-items: start;
+}
+
+/* Сітка особистого кабінету */
+.profile-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.profile-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: var(--color-dark-brown);
+  color: var(--color-accent-gold);
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  margin-top: 1.25rem;
+}
+
+@media (max-width: 860px) {
+  .profile-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* Стилізація картки контактів (для лівої колонки у contact-grid) */
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  padding: 0; /* Прибираємо стандартний внутрішній відступ, щоб картинка була впритул до верху картки */
+  overflow: hidden; /* Щоб заокруглення картки обрізало картинку зверху */
+  height: 100%; /* Картка розтягнеться на повну висоту */
+}
+
+/* Контейнер для зображення на сторінці контактів */
+.contact-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 240px; /* Фіксована висота, щоб не забирати надто багато місця */
+  overflow: hidden;
+}
+
+/* Оптимізовані стилі для картинки */
+.contact-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Завжди заповнює простір без деформацій */
+  object-position: center 30%; /* Налаштовуємо фокус на книги */
+  border-bottom: 1px solid var(--color-border);
+  transition: transform 0.5s ease;
+}
+
+/* Легкий ефект при наведенні для інтерактивності */
+.contact-card:hover .contact-img {
+  transform: scale(1.02);
+}
+
+/* Відступи для текстової частини всередині картки */
+.contact-content {
+  padding: 1.5rem;
+}
+
+.contact-content h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.contact-lead {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+/* Список контактів */
+.contact-info-list {
+  border-top: 1px solid var(--color-border);
+  padding-top: 1.25rem;
+  margin-top: auto; /* Притискає список донизу, якщо картка велика */
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-info-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  font-size: 0.95rem;
+}
+
+.contact-info-list .icon {
+  font-size: 1.2rem;
+  color: var(--color-btn-primary);
+  line-height: 1;
+}
+
+.contact-info-list a {
+  color: var(--color-btn-secondary);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.contact-info-list a:hover {
+  text-decoration: underline;
+  color: var(--color-btn-primary);
+}
+
+/* Адаптивність для планшетів та телефонів */
+@media (max-width: 992px) {
+  .contact-image-wrapper {
+    height: 200px; /* На маленьких екранах зменшуємо висоту */
+  }
+}
+/* Візуальне виділення та розділення секції "Правила спільноти" */
+.club-rules {
+  background-color: var(--color-bg-card);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  padding: 3rem 0;
+  margin-top: 1rem;
+}
+
+.club-rules h2 {
+  margin-bottom: 1.5rem;
+}
+
+/* Тонкі розділювальні лінії між пунктами списку правил */
+.club-rules .rules-list {
+  gap: 0;
+  padding-left: 1.25rem;
+}
+
+.club-rules .rules-list li {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.club-rules .rules-list li:first-child {
+  padding-top: 0;
+}
+
+.club-rules .rules-list li:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}

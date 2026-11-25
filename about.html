@@ -4,10 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Про клуб та Правила — BookMatch</title>
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/variables.css">
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -17,6 +14,12 @@
         <img src="images/logo/logo.png" alt="BookMatch логотип" width="80" height="80">
         <span>BookMatch</span>
       </a>
+      <input type="checkbox" id="burger-toggle" class="burger-toggle" aria-label="Відкрити меню">
+      <label for="burger-toggle" class="burger-btn" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
       <nav class="main-nav" aria-label="Головна навігація">
         <ul class="nav-list">
           <li><a href="index.html">Головна</a></li>
@@ -36,13 +39,18 @@
   <main>
     <section class="about-mission">
       <div class="container">
-        <img src="images/books/discuss.jpg" alt="image" width="150" height="200">
         <h1>Маніфест та місія BookMatch</h1>
         <p class="lead">
           Наша місія — об'єднувати людей навколо книг, перетворюючи індивідуальне читання 
           на доступний, структурований і надихаючий соціальний досвід через культуру 
           живого діалогу та відкритих спільнот.
         </p>
+        <div class="about-hero-media">
+          <img 
+            src="images/books/discuss.jpeg" 
+            alt="Затишна книжкова зустріч учасників клубу BookMatch у кав’ярні"
+          >
+        </div>
       </div>
     </section>
 
